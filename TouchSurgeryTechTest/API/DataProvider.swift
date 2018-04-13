@@ -12,16 +12,16 @@ import RxCocoa
 
 //this is an abstraction around URLSession which will help testing view models
 protocol DataProvider {
-    func fetchResponse(fromURL url: URL) -> Observable<(response: HTTPURLResponse, data: Data)>
+    func fetchResponse(fromURL url: URL) -> Observable<Data>
 }
 
 //URLSession is the easiest way, build on existing Rx extensions to add conformance
 extension URLSession: DataProvider {
 
-    func fetchResponse(fromURL url: URL) -> Observable<(response: HTTPURLResponse, data: Data)> {
+    func fetchResponse(fromURL url: URL) -> Observable<Data> {
         let urlRequest = URLRequest(url: url)
 
         return self.rx
-            .response(request: urlRequest)
+            .data(request: urlRequest)
     }
 }
