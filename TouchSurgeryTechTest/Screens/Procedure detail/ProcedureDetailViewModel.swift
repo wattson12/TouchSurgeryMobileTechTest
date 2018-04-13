@@ -10,8 +10,6 @@ import Foundation
 import RxSwift
 import RxCocoa
 
-typealias ProcedureDetail = String
-
 final class ProcedureDetailViewModel {
 
     let disposeBag = DisposeBag()
@@ -28,12 +26,13 @@ final class ProcedureDetailViewModel {
 
     func fetchProcedureDetail() {
 
+        let emptyProcedureDetail = ProcedureDetail(emptyDetailFromProcedure: procedure)
+
         dataProvider
             .fetchResponse(fromURL: .procedures)
-            .convert(to: [Procedure].self)
-            .catchErrorJustReturn([]) //very simple error handling
+            .convert(to: ProcedureDetail.self)
+            .catchErrorJustReturn(emptyProcedureDetail) //basic error handling (no image but we still have a name)
             .observeOn(MainScheduler.instance) //move back to the main thread for observable updates since this is where UI is driven from
-            .map { $0.description }
             .bind(to: procedureDetail)
             .disposed(by: disposeBag)
     }

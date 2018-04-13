@@ -35,6 +35,9 @@
 		22F63F9B2080FBE900482413 /* ProcedureDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F63F9A2080FBE900482413 /* ProcedureDetailViewController.swift */; };
 		22F63F9D2080FBF400482413 /* ProcedureDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F63F9C2080FBF400482413 /* ProcedureDetailViewModel.swift */; };
 		22F63F9F2080FCB300482413 /* ProcedureListTableViewControllerAppCoordinatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F63F9E2080FCB300482413 /* ProcedureListTableViewControllerAppCoordinatorDelegate.swift */; };
+		22F63FA12080FE1C00482413 /* ProcedureDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F63FA02080FE1C00482413 /* ProcedureDetail.swift */; };
+		22F63FA32080FF2A00482413 /* ProcedureDetailTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F63FA22080FF2A00482413 /* ProcedureDetailTests.swift */; };
+		22F63FA52080FF6300482413 /* procedure_detail.json in Resources */ = {isa = PBXBuildFile; fileRef = 22F63FA42080FF6300482413 /* procedure_detail.json */; };
 		A93BBDECC03FAA2AB68D9BA8 /* Pods_TouchSurgeryTechTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41561EC9A1C301F8DEA647BF /* Pods_TouchSurgeryTechTest.framework */; };
 		D54D5B6FEF29ED4D2394EDAC /* Pods_TouchSurgeryTechTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E155F662E31E9024D8188937 /* Pods_TouchSurgeryTechTestTests.framework */; };
 		DDE368692A73B41F8CB0816C /* Pods_TouchSurgeryTechTestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7859889F46218E8B1D01FBD2 /* Pods_TouchSurgeryTechTestUITests.framework */; };
@@ -94,6 +97,9 @@
 		22F63F9A2080FBE900482413 /* ProcedureDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcedureDetailViewController.swift; sourceTree = "<group>"; };
 		22F63F9C2080FBF400482413 /* ProcedureDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcedureDetailViewModel.swift; sourceTree = "<group>"; };
 		22F63F9E2080FCB300482413 /* ProcedureListTableViewControllerAppCoordinatorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcedureListTableViewControllerAppCoordinatorDelegate.swift; sourceTree = "<group>"; };
+		22F63FA02080FE1C00482413 /* ProcedureDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcedureDetail.swift; sourceTree = "<group>"; };
+		22F63FA22080FF2A00482413 /* ProcedureDetailTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcedureDetailTests.swift; sourceTree = "<group>"; };
+		22F63FA42080FF6300482413 /* procedure_detail.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = procedure_detail.json; sourceTree = "<group>"; };
 		41561EC9A1C301F8DEA647BF /* Pods_TouchSurgeryTechTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TouchSurgeryTechTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FE40317D3988EFFDF312CF7 /* Pods-TouchSurgeryTechTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TouchSurgeryTechTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TouchSurgeryTechTest/Pods-TouchSurgeryTechTest.debug.xcconfig"; sourceTree = "<group>"; };
 		7859889F46218E8B1D01FBD2 /* Pods_TouchSurgeryTechTestUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TouchSurgeryTechTestUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -275,6 +281,7 @@
 			isa = PBXGroup;
 			children = (
 				22F63F802080F1FC00482413 /* Procedure.swift */,
+				22F63FA02080FE1C00482413 /* ProcedureDetail.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -283,6 +290,7 @@
 			isa = PBXGroup;
 			children = (
 				22F63F832080F2F600482413 /* ProcedureTests.swift */,
+				22F63FA22080FF2A00482413 /* ProcedureDetailTests.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -302,6 +310,7 @@
 			children = (
 				22F63F892080F34800482413 /* single_procedure.json */,
 				22F63F8B2080F4A300482413 /* procedure_list.json */,
+				22F63FA42080FF6300482413 /* procedure_detail.json */,
 			);
 			path = JSON;
 			sourceTree = "<group>";
@@ -480,6 +489,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				22F63F8A2080F34800482413 /* single_procedure.json in Resources */,
+				22F63FA52080FF6300482413 /* procedure_detail.json in Resources */,
 				22F63F8C2080F4A300482413 /* procedure_list.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -670,6 +680,7 @@
 				22F63F712080E81300482413 /* ReusableElement.swift in Sources */,
 				22F63F7E2080F12D00482413 /* UIFont+Styling.swift in Sources */,
 				22F63F9F2080FCB300482413 /* ProcedureListTableViewControllerAppCoordinatorDelegate.swift in Sources */,
+				22F63FA12080FE1C00482413 /* ProcedureDetail.swift in Sources */,
 				22F63F812080F1FC00482413 /* Procedure.swift in Sources */,
 				22F63F912080F59600482413 /* URL+Creation.swift in Sources */,
 				22F63F7C2080EE2B00482413 /* UIColor+Styling.swift in Sources */,
@@ -693,6 +704,7 @@
 				22F63F872080F32A00482413 /* TestHelpers.swift in Sources */,
 				22F63F942080F66700482413 /* URL+CreationTests.swift in Sources */,
 				22F63F982080FA1000482413 /* StubDataProvider.swift in Sources */,
+				22F63FA32080FF2A00482413 /* ProcedureDetailTests.swift in Sources */,
 				22F63F742080E8BB00482413 /* ReusableElementTests.swift in Sources */,
 				22F63F7A2080EB9D00482413 /* ProcedureListViewModelTests.swift in Sources */,
 				22F63F842080F2F600482413 /* ProcedureTests.swift in Sources */,
