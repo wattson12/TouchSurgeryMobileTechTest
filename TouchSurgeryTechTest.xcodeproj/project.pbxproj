@@ -42,6 +42,7 @@
 		22F63FA9208100B900482413 /* ProcedureDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F63FA8208100B900482413 /* ProcedureDetailView.swift */; };
 		22F63FAB2081077200482413 /* Observable+ConversionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F63FAA2081077200482413 /* Observable+ConversionTests.swift */; };
 		22F63FAE20810BB200482413 /* ProcedureDetailViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F63FAD20810BB200482413 /* ProcedureDetailViewModelTests.swift */; };
+		22F63FB220810DE800482413 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 22F63FB420810DE800482413 /* Localizable.strings */; };
 		A93BBDECC03FAA2AB68D9BA8 /* Pods_TouchSurgeryTechTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41561EC9A1C301F8DEA647BF /* Pods_TouchSurgeryTechTest.framework */; };
 		D54D5B6FEF29ED4D2394EDAC /* Pods_TouchSurgeryTechTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E155F662E31E9024D8188937 /* Pods_TouchSurgeryTechTestTests.framework */; };
 		DDE368692A73B41F8CB0816C /* Pods_TouchSurgeryTechTestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7859889F46218E8B1D01FBD2 /* Pods_TouchSurgeryTechTestUITests.framework */; };
@@ -108,6 +109,7 @@
 		22F63FA8208100B900482413 /* ProcedureDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcedureDetailView.swift; sourceTree = "<group>"; };
 		22F63FAA2081077200482413 /* Observable+ConversionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observable+ConversionTests.swift"; sourceTree = "<group>"; };
 		22F63FAD20810BB200482413 /* ProcedureDetailViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcedureDetailViewModelTests.swift; sourceTree = "<group>"; };
+		22F63FB320810DE800482413 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		41561EC9A1C301F8DEA647BF /* Pods_TouchSurgeryTechTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TouchSurgeryTechTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FE40317D3988EFFDF312CF7 /* Pods-TouchSurgeryTechTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TouchSurgeryTechTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TouchSurgeryTechTest/Pods-TouchSurgeryTechTest.debug.xcconfig"; sourceTree = "<group>"; };
 		7859889F46218E8B1D01FBD2 /* Pods_TouchSurgeryTechTestUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TouchSurgeryTechTestUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -170,6 +172,7 @@
 		22F63F302080E30800482413 /* TouchSurgeryTechTest */ = {
 			isa = PBXGroup;
 			children = (
+				22F63FAF20810DD600482413 /* Localisation */,
 				22F63F7F2080F1ED00482413 /* Model */,
 				22F63F8D2080F50000482413 /* API */,
 				22F63F6F2080E7FE00482413 /* UIKit Helpers + Styling */,
@@ -362,6 +365,14 @@
 			path = "Procedure detail";
 			sourceTree = "<group>";
 		};
+		22F63FAF20810DD600482413 /* Localisation */ = {
+			isa = PBXGroup;
+			children = (
+				22F63FB420810DE800482413 /* Localizable.strings */,
+			);
+			path = Localisation;
+			sourceTree = "<group>";
+		};
 		52EEEE8B58EA90DD870B87DB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -500,6 +511,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				22F63F3C2080E30B00482413 /* LaunchScreen.storyboard in Resources */,
+				22F63FB220810DE800482413 /* Localizable.strings in Resources */,
 				22F63F392080E30B00482413 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -765,6 +777,14 @@
 				22F63F3B2080E30B00482413 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		22F63FB420810DE800482413 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				22F63FB320810DE800482413 /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
