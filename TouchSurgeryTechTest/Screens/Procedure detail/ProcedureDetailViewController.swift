@@ -41,7 +41,7 @@ class ProcedureDetailViewController: BaseViewController {
         //setup table from phases
         viewModel
             .procedureDetail
-            .map { $0.phases }
+            .mapToKeypath(\.phases)
             .bind(to: detailView.tableView.rx.items(cellIdentifier: ProcedureTableViewCell.reuseIdentifier)) { (_, phase: Phase, cell: ProcedureTableViewCell) in
                 cell.nameLabel.text = phase.name
                 cell.iconImageView.kf.setImage(with: URL(string: phase.icon))
@@ -52,20 +52,20 @@ class ProcedureDetailViewController: BaseViewController {
         viewModel
             .procedure
             .observeOn(MainScheduler.instance)
-            .map { $0.name }
+            .mapToKeypath(\.name)
             .bind(to: detailView.titleLabel.rx.text)
             .disposed(by: disposeBag)
 
         viewModel
             .procedureDetail
-            .map { $0.name }
+            .mapToKeypath(\.name)
             .bind(to: detailView.titleLabel.rx.text)
             .disposed(by: disposeBag)
 
         //load image from card once detail is loaded
         viewModel
             .procedureDetail
-            .map { $0.card }
+            .mapToKeypath(\.card)
             .subscribe(onNext: { [unowned self] card in
                 self.detailView.imageView.kf.setImage(with: URL(string: card))
             })
