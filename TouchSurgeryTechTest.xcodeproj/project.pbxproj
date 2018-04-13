@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		22F63F322080E30800482413 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F63F312080E30800482413 /* AppDelegate.swift */; };
-		22F63F342080E30800482413 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F63F332080E30800482413 /* ViewController.swift */; };
-		22F63F372080E30800482413 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22F63F352080E30800482413 /* Main.storyboard */; };
 		22F63F392080E30B00482413 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22F63F382080E30B00482413 /* Assets.xcassets */; };
 		22F63F3C2080E30B00482413 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22F63F3A2080E30B00482413 /* LaunchScreen.storyboard */; };
 		22F63F472080E30B00482413 /* TouchSurgeryTechTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F63F462080E30B00482413 /* TouchSurgeryTechTestTests.swift */; };
@@ -41,8 +39,6 @@
 		163140727408B1A503B6BC2C /* Pods-TouchSurgeryTechTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TouchSurgeryTechTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-TouchSurgeryTechTest/Pods-TouchSurgeryTechTest.release.xcconfig"; sourceTree = "<group>"; };
 		22F63F2E2080E30800482413 /* TouchSurgeryTechTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TouchSurgeryTechTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22F63F312080E30800482413 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		22F63F332080E30800482413 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		22F63F362080E30800482413 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		22F63F382080E30B00482413 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		22F63F3B2080E30B00482413 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		22F63F3D2080E30B00482413 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -115,8 +111,6 @@
 			isa = PBXGroup;
 			children = (
 				22F63F312080E30800482413 /* AppDelegate.swift */,
-				22F63F332080E30800482413 /* ViewController.swift */,
-				22F63F352080E30800482413 /* Main.storyboard */,
 				22F63F382080E30B00482413 /* Assets.xcassets */,
 				22F63F3A2080E30B00482413 /* LaunchScreen.storyboard */,
 				22F63F3D2080E30B00482413 /* Info.plist */,
@@ -280,7 +274,6 @@
 			files = (
 				22F63F3C2080E30B00482413 /* LaunchScreen.storyboard in Resources */,
 				22F63F392080E30B00482413 /* Assets.xcassets in Resources */,
-				22F63F372080E30800482413 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,7 +450,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				22F63F342080E30800482413 /* ViewController.swift in Sources */,
 				22F63F322080E30800482413 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -494,14 +486,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		22F63F352080E30800482413 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				22F63F362080E30800482413 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		22F63F3A2080E30B00482413 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -635,7 +619,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9B4L4655ZF;
 				INFOPLIST_FILE = TouchSurgeryTechTest/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.samwatts.TouchSurgeryTechTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -651,7 +638,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9B4L4655ZF;
 				INFOPLIST_FILE = TouchSurgeryTechTest/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.samwatts.TouchSurgeryTechTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -668,7 +658,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9B4L4655ZF;
 				INFOPLIST_FILE = TouchSurgeryTechTestTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.samwatts.TouchSurgeryTechTestTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -686,7 +680,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9B4L4655ZF;
 				INFOPLIST_FILE = TouchSurgeryTechTestTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.samwatts.TouchSurgeryTechTestTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -703,7 +701,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9B4L4655ZF;
 				INFOPLIST_FILE = TouchSurgeryTechTestUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.samwatts.TouchSurgeryTechTestUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -720,7 +722,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9B4L4655ZF;
 				INFOPLIST_FILE = TouchSurgeryTechTestUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.samwatts.TouchSurgeryTechTestUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
