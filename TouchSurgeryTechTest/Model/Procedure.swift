@@ -8,8 +8,8 @@
 
 import Foundation
 
-struct Procedure: Decodable {
-    
+struct Procedure: Decodable, Equatable {
+
     private enum CodingKeys: String, CodingKey {
         case identifier = "id"
         case name
