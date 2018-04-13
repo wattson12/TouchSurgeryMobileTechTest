@@ -17,7 +17,7 @@ final class AppCoordinator {
     }
 
     func start() {
-        let procedureListViewController = UIViewController()
+        let procedureListViewController = ProcedureListTableViewController()
         let rootNavigationController = UINavigationController(rootViewController: procedureListViewController)
 
         window.rootViewController = rootNavigationController
