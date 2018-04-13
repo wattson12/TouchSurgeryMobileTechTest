@@ -1,0 +1,6 @@
+excluded: # ignoring external code and tests
+  - Pods
+  - TouchSurgeryTechTestTests
+  - TouchSurgeryTechTestUITests
+
+line_length: 200

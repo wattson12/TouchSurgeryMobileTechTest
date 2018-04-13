@@ -167,11 +167,12 @@
 			buildConfigurationList = 22F63F562080E30B00482413 /* Build configuration list for PBXNativeTarget "TouchSurgeryTechTest" */;
 			buildPhases = (
 				617415AE394A21EC8AEBA870 /* [CP] Check Pods Manifest.lock */,
+				22F63F5F2080E42100482413 /* Swiftlint */,
+				D2E8FD7116AA8E666743C7E8 /* [CP] Copy Pods Resources */,
 				22F63F2A2080E30800482413 /* Sources */,
 				22F63F2B2080E30800482413 /* Frameworks */,
 				22F63F2C2080E30800482413 /* Resources */,
 				397FE3734AE7A2DE65F212CA /* [CP] Embed Pods Frameworks */,
-				D2E8FD7116AA8E666743C7E8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -329,6 +330,20 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
+		};
+		22F63F5F2080E42100482413 /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"";
 		};
 		284D1897673C30F84933C3C5 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
