@@ -23,10 +23,53 @@ class ProcedureListViewModelTests: XCTestCase {
     
     func testInitialProcedureArrayIsSetInObservableValue() {
 
-        let viewModel = ProcedureListViewModel(procedures: [("a", "b"), ("1", "2")])
+        let procedures: [Procedure] = [
+            Procedure.init(identifier: "a", name: "b", icon: "c"),
+            Procedure.init(identifier: "1", name: "2", icon: "3")
+        ]
+        let viewModel = ProcedureListViewModel(procedures: procedures)
 
-        XCTAssertEqual(viewModel.procedures.value.map { $0.0 }, ["a", "1"])
-        XCTAssertEqual(viewModel.procedures.value.map { $0.1 }, ["b", "2"])
+        XCTAssertEqual(viewModel.procedures.value, procedures)
+    }
+
+    func testViewModelBindsDataProviderResponseToProcedures() {
+
+        let stubbedDataProvider = StubDataProvider(data: testData(fromFixtureNamed: "procedure_list"))
+        let viewModel = ProcedureListViewModel(dataProvider: stubbedDataProvider)
+
+        let viewModelComplete = expectation(description: "view model fetch complete")
+        viewModel
+            .procedures
+            .skip(1) //ignore the initial value
+            .subscribe(onNext: { procedures in
+                XCTAssertEqual(procedures.count, 10)
+                viewModelComplete.fulfill()
+            })
+            .disposed(by: disposeBag)
+
+        viewModel.fetchProcedures()
+
+        waitForExpectations(timeout: 0.1)
+    }
+
+    func testViewModelConvertsFailedResponsesToEmptyArrayBeforeBinding() {
+
+        let stubbedDataProvider = ErrorDataProvider()
+        let viewModel = ProcedureListViewModel(dataProvider: stubbedDataProvider)
+
+        let viewModelComplete = expectation(description: "view model fetch complete")
+        viewModel
+            .procedures
+            .skip(1) //ignore the initial value
+            .subscribe(onNext: { procedures in
+                XCTAssertTrue(procedures.isEmpty)
+                viewModelComplete.fulfill()
+            })
+            .disposed(by: disposeBag)
+
+        viewModel.fetchProcedures()
+
+        waitForExpectations(timeout: 0.1)
     }
     
 }

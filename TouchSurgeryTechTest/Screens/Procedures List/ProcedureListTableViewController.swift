@@ -8,6 +8,8 @@
 
 import UIKit
 import Kingfisher
+import RxSwift
+import RxCocoa
 
 class ProcedureListTableViewController: BaseViewController {
 
@@ -37,34 +39,23 @@ class ProcedureListTableViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.tableView.delegate = self
-        self.tableView.dataSource = self
-    }
-}
-
-extension ProcedureListTableViewController: UITableViewDelegate, UITableViewDataSource {
-
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.procedures.value.count
+        setupBindings()
     }
 
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: ProcedureTableViewCell.reuseIdentifier, for: indexPath) as? ProcedureTableViewCell else {
-            fatalError("Unregistered cell used on table view")
-        }
+    private func setupBindings() {
 
-        let procedure = viewModel.procedures.value[indexPath.row]
-        cell.nameLabel.text = procedure.0
-
-        return cell
+        viewModel
+            .procedures
+            .bind(to: tableView.rx.items(cellIdentifier: ProcedureTableViewCell.reuseIdentifier)) { (_, procedure: Procedure, cell: ProcedureTableViewCell) in
+                cell.nameLabel.text = procedure.name
+                cell.iconImageView.kf.setImage(with: URL(string: procedure.icon))
+            }
+            .disposed(by: disposeBag)
     }
 
-    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        guard let cell = cell as? ProcedureTableViewCell else {
-            fatalError("Incorrect cell type")
-        }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
 
-        let procedure = viewModel.procedures.value[indexPath.row]
-        cell.iconImageView.kf.setImage(with: URL(string: procedure.1))
+        viewModel.fetchProcedures()
     }
 }
