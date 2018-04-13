@@ -10,4 +10,14 @@ import UIKit
 
 class ProcedureDetailViewController: BaseViewController {
 
+    @available(iOS, unavailable, message: "init() is unavailable, use init(viewModel:) instead")
+    override init() { fatalError() }
+
+    private let viewModel: ProcedureDetailViewModel
+
+    init(viewModel: ProcedureDetailViewModel) {
+        self.viewModel = viewModel
+
+        super.init()
+    }
 }
