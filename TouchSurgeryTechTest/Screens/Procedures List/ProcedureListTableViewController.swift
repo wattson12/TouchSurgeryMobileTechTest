@@ -32,6 +32,8 @@ class ProcedureListTableViewController: BaseViewController {
         self.coordinatorDelegate = coordinatorDelegate
 
         super.init()
+
+        self.title = L10n.ProcedureList.title
     }
 
     override func loadView() {

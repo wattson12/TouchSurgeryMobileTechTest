@@ -1,0 +1,4 @@
+strings:
+  paths: TouchSurgeryTechTest/Localisation/en.lproj/Localizable.strings
+  templateName: structured-swift4
+  output: TouchSurgeryTechTest/Localisation/Strings.swift
