@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class ProcedureListTableViewController: BaseViewController {
 
@@ -53,8 +54,17 @@ extension ProcedureListTableViewController: UITableViewDelegate, UITableViewData
         }
 
         let procedure = viewModel.procedures.value[indexPath.row]
-        cell.textLabel?.text = procedure.0
+        cell.nameLabel.text = procedure.0
 
         return cell
+    }
+
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        guard let cell = cell as? ProcedureTableViewCell else {
+            fatalError("Incorrect cell type")
+        }
+
+        let procedure = viewModel.procedures.value[indexPath.row]
+        cell.iconImageView.kf.setImage(with: URL(string: procedure.1))
     }
 }

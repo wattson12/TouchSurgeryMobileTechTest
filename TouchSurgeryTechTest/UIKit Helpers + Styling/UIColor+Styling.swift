@@ -13,4 +13,8 @@ extension UIColor {
     static var background: UIColor {
         return .white
     }
+
+    static var procedureName: UIColor {
+        return .darkText
+    }
 }
