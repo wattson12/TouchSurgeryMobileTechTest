@@ -22,5 +22,14 @@ class ProcedureTests: XCTestCase {
             XCTFail("Unexpected decoding error: \(error)")
         }
     }
+
+    func testProcedureArrayCanBeMappedFromJSON() {
+        do {
+            let mappedProcedures = try JSONDecoder().decode([Procedure].self, from: testData(fromFixtureNamed: "procedure_list"))
+            XCTAssertEqual(mappedProcedures.count, 10)
+        } catch {
+            XCTFail("Unexpected decoding error: \(error)")
+        }
+    }
     
 }
