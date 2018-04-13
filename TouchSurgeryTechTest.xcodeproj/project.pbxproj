@@ -31,6 +31,7 @@
 		22F63F912080F59600482413 /* URL+Creation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F63F902080F59600482413 /* URL+Creation.swift */; };
 		22F63F942080F66700482413 /* URL+CreationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F63F932080F66700482413 /* URL+CreationTests.swift */; };
 		22F63F962080F88500482413 /* Observable+Conversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F63F952080F88500482413 /* Observable+Conversion.swift */; };
+		22F63F982080FA1000482413 /* StubDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F63F972080FA1000482413 /* StubDataProvider.swift */; };
 		A93BBDECC03FAA2AB68D9BA8 /* Pods_TouchSurgeryTechTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41561EC9A1C301F8DEA647BF /* Pods_TouchSurgeryTechTest.framework */; };
 		D54D5B6FEF29ED4D2394EDAC /* Pods_TouchSurgeryTechTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E155F662E31E9024D8188937 /* Pods_TouchSurgeryTechTestTests.framework */; };
 		DDE368692A73B41F8CB0816C /* Pods_TouchSurgeryTechTestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7859889F46218E8B1D01FBD2 /* Pods_TouchSurgeryTechTestUITests.framework */; };
@@ -86,6 +87,7 @@
 		22F63F902080F59600482413 /* URL+Creation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Creation.swift"; sourceTree = "<group>"; };
 		22F63F932080F66700482413 /* URL+CreationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+CreationTests.swift"; sourceTree = "<group>"; };
 		22F63F952080F88500482413 /* Observable+Conversion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observable+Conversion.swift"; sourceTree = "<group>"; };
+		22F63F972080FA1000482413 /* StubDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubDataProvider.swift; sourceTree = "<group>"; };
 		41561EC9A1C301F8DEA647BF /* Pods_TouchSurgeryTechTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TouchSurgeryTechTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FE40317D3988EFFDF312CF7 /* Pods-TouchSurgeryTechTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TouchSurgeryTechTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TouchSurgeryTechTest/Pods-TouchSurgeryTechTest.debug.xcconfig"; sourceTree = "<group>"; };
 		7859889F46218E8B1D01FBD2 /* Pods_TouchSurgeryTechTestUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TouchSurgeryTechTestUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -282,6 +284,7 @@
 			children = (
 				22F63F882080F33400482413 /* JSON */,
 				22F63F862080F32A00482413 /* TestHelpers.swift */,
+				22F63F972080FA1000482413 /* StubDataProvider.swift */,
 			);
 			path = "Test Helpers";
 			sourceTree = "<group>";
@@ -669,6 +672,7 @@
 				22F63F652080E61D00482413 /* AppCoordinatorTests.swift in Sources */,
 				22F63F872080F32A00482413 /* TestHelpers.swift in Sources */,
 				22F63F942080F66700482413 /* URL+CreationTests.swift in Sources */,
+				22F63F982080FA1000482413 /* StubDataProvider.swift in Sources */,
 				22F63F742080E8BB00482413 /* ReusableElementTests.swift in Sources */,
 				22F63F7A2080EB9D00482413 /* ProcedureListViewModelTests.swift in Sources */,
 				22F63F842080F2F600482413 /* ProcedureTests.swift in Sources */,

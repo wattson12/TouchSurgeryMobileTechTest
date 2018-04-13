@@ -28,6 +28,7 @@ final class ProcedureListViewModel {
         dataProvider
             .fetchResponse(fromURL: .procedures)
             .convert(to: [Procedure].self)
+            .catchErrorJustReturn([]) //very simple error handling
             .observeOn(MainScheduler.instance) //move back to the main thread for observable updates since this is where UI is driven from
             .bind(to: procedures)
             .disposed(by: disposeBag)
