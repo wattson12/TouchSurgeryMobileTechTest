@@ -40,6 +40,12 @@ class ProcedureListTableViewController: BaseViewController {
         self.tableView.delegate = self
         self.tableView.dataSource = self
     }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        viewModel.fetchProcedures()
+    }
 }
 
 extension ProcedureListTableViewController: UITableViewDelegate, UITableViewDataSource {

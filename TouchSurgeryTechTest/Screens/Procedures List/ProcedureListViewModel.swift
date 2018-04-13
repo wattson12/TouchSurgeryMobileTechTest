@@ -16,7 +16,20 @@ final class ProcedureListViewModel {
 
     let procedures: BehaviorRelay<[Procedure]>
 
-    init(procedures: [Procedure] = []) {
+    let dataProvider: DataProvider
+
+    init(procedures: [Procedure] = [], dataProvider: DataProvider = URLSession.shared) {
         self.procedures = BehaviorRelay(value: procedures)
+        self.dataProvider = dataProvider
+    }
+
+    func fetchProcedures() {
+
+        dataProvider
+            .fetchResponse(fromURL: .procedures)
+            .convert(to: [Procedure].self)
+            .observeOn(MainScheduler.instance) //move back to the main thread for observable updates since this is where UI is driven from
+            .bind(to: procedures)
+            .disposed(by: disposeBag)
     }
 }
