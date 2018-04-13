@@ -10,8 +10,9 @@
 		22F63F322080E30800482413 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F63F312080E30800482413 /* AppDelegate.swift */; };
 		22F63F392080E30B00482413 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22F63F382080E30B00482413 /* Assets.xcassets */; };
 		22F63F3C2080E30B00482413 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22F63F3A2080E30B00482413 /* LaunchScreen.storyboard */; };
-		22F63F472080E30B00482413 /* TouchSurgeryTechTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F63F462080E30B00482413 /* TouchSurgeryTechTestTests.swift */; };
 		22F63F522080E30B00482413 /* TouchSurgeryTechTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F63F512080E30B00482413 /* TouchSurgeryTechTestUITests.swift */; };
+		22F63F622080E49E00482413 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F63F612080E49E00482413 /* AppCoordinator.swift */; };
+		22F63F652080E61D00482413 /* AppCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F63F642080E61D00482413 /* AppCoordinatorTests.swift */; };
 		A93BBDECC03FAA2AB68D9BA8 /* Pods_TouchSurgeryTechTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41561EC9A1C301F8DEA647BF /* Pods_TouchSurgeryTechTest.framework */; };
 		D54D5B6FEF29ED4D2394EDAC /* Pods_TouchSurgeryTechTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E155F662E31E9024D8188937 /* Pods_TouchSurgeryTechTestTests.framework */; };
 		DDE368692A73B41F8CB0816C /* Pods_TouchSurgeryTechTestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7859889F46218E8B1D01FBD2 /* Pods_TouchSurgeryTechTestUITests.framework */; };
@@ -43,11 +44,12 @@
 		22F63F3B2080E30B00482413 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		22F63F3D2080E30B00482413 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		22F63F422080E30B00482413 /* TouchSurgeryTechTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TouchSurgeryTechTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		22F63F462080E30B00482413 /* TouchSurgeryTechTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchSurgeryTechTestTests.swift; sourceTree = "<group>"; };
 		22F63F482080E30B00482413 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		22F63F4D2080E30B00482413 /* TouchSurgeryTechTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TouchSurgeryTechTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		22F63F512080E30B00482413 /* TouchSurgeryTechTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchSurgeryTechTestUITests.swift; sourceTree = "<group>"; };
 		22F63F532080E30B00482413 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		22F63F612080E49E00482413 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		22F63F642080E61D00482413 /* AppCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinatorTests.swift; sourceTree = "<group>"; };
 		41561EC9A1C301F8DEA647BF /* Pods_TouchSurgeryTechTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TouchSurgeryTechTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FE40317D3988EFFDF312CF7 /* Pods-TouchSurgeryTechTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TouchSurgeryTechTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TouchSurgeryTechTest/Pods-TouchSurgeryTechTest.debug.xcconfig"; sourceTree = "<group>"; };
 		7859889F46218E8B1D01FBD2 /* Pods_TouchSurgeryTechTestUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TouchSurgeryTechTestUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -110,6 +112,7 @@
 		22F63F302080E30800482413 /* TouchSurgeryTechTest */ = {
 			isa = PBXGroup;
 			children = (
+				22F63F602080E48800482413 /* Coordinator */,
 				22F63F312080E30800482413 /* AppDelegate.swift */,
 				22F63F382080E30B00482413 /* Assets.xcassets */,
 				22F63F3A2080E30B00482413 /* LaunchScreen.storyboard */,
@@ -121,7 +124,7 @@
 		22F63F452080E30B00482413 /* TouchSurgeryTechTestTests */ = {
 			isa = PBXGroup;
 			children = (
-				22F63F462080E30B00482413 /* TouchSurgeryTechTestTests.swift */,
+				22F63F632080E60900482413 /* Coordinator */,
 				22F63F482080E30B00482413 /* Info.plist */,
 			);
 			path = TouchSurgeryTechTestTests;
@@ -134,6 +137,22 @@
 				22F63F532080E30B00482413 /* Info.plist */,
 			);
 			path = TouchSurgeryTechTestUITests;
+			sourceTree = "<group>";
+		};
+		22F63F602080E48800482413 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				22F63F612080E49E00482413 /* AppCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		22F63F632080E60900482413 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				22F63F642080E61D00482413 /* AppCoordinatorTests.swift */,
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 		52EEEE8B58EA90DD870B87DB /* Pods */ = {
@@ -465,6 +484,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22F63F622080E49E00482413 /* AppCoordinator.swift in Sources */,
 				22F63F322080E30800482413 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -473,7 +493,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				22F63F472080E30B00482413 /* TouchSurgeryTechTestTests.swift in Sources */,
+				22F63F652080E61D00482413 /* AppCoordinatorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
