@@ -14,24 +14,24 @@ final class ProcedureDetailViewModel {
 
     let disposeBag = DisposeBag()
 
-    private let procedure: Procedure
+    let procedure: BehaviorRelay<Procedure>
     let procedureDetail: PublishSubject<ProcedureDetail> = PublishSubject()
 
     let dataProvider: DataProvider
 
     init(procedure: Procedure, dataProvider: DataProvider = URLSession.shared) {
-        self.procedure = procedure
+        self.procedure = BehaviorRelay(value: procedure)
         self.dataProvider = dataProvider
     }
 
     func fetchProcedureDetail() {
-        guard let url = URL.procedureDetail(forID: procedure.identifier) else {
+        guard let url = URL.procedureDetail(forID: procedure.value.identifier) else {
             print("Not fetching detail because of invalid URL")
             return
         }
 
         //create empty detail here to avoid implicitly capturing self
-        let emptyProcedureDetail = ProcedureDetail(emptyDetailFromProcedure: procedure)
+        let emptyProcedureDetail = ProcedureDetail(emptyDetailFromProcedure: procedure.value)
 
         dataProvider
             .fetchResponse(fromURL: url)

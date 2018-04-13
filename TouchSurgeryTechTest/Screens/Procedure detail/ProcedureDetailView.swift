@@ -41,8 +41,19 @@ class ProcedureDetailView: BaseView {
         self.addSubview(imageView)
         self.addSubview(titleLabel)
         self.addSubview(tableView)
+    }
+
+    private var constraintsConfigured: Bool = false
+
+    override func didMoveToSuperview() {
+        super.didMoveToSuperview()
+
+        guard constraintsConfigured == false else {
+            return
+        }
 
         setupConstaints()
+        constraintsConfigured = true
     }
 
     private func setupConstaints() {
