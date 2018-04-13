@@ -15,9 +15,15 @@ class ProcedureDetailViewController: BaseViewController {
 
     private let viewModel: ProcedureDetailViewModel
 
+    let detailView: ProcedureDetailView = ProcedureDetailView()
+
     init(viewModel: ProcedureDetailViewModel) {
         self.viewModel = viewModel
 
         super.init()
+    }
+
+    override func loadView() {
+        self.view = detailView
     }
 }

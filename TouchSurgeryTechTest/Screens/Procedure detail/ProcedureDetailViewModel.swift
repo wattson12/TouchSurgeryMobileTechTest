@@ -25,11 +25,16 @@ final class ProcedureDetailViewModel {
     }
 
     func fetchProcedureDetail() {
+        guard let url = URL.procedureDetail(forID: procedure.identifier) else {
+            print("Not fetching detail because of invalid URL")
+            return
+        }
 
+        //create empty detail here to avoid implicitly capturing self
         let emptyProcedureDetail = ProcedureDetail(emptyDetailFromProcedure: procedure)
 
         dataProvider
-            .fetchResponse(fromURL: .procedures)
+            .fetchResponse(fromURL: url)
             .convert(to: ProcedureDetail.self)
             .catchErrorJustReturn(emptyProcedureDetail) //basic error handling (no image but we still have a name)
             .observeOn(MainScheduler.instance) //move back to the main thread for observable updates since this is where UI is driven from
