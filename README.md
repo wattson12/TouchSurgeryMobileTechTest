@@ -4,7 +4,11 @@
 
 This is a tech test for touch surgery, following instructions [here](https://github.com/touch-surgery/mobile-tech-test)
 
-The app is build using an MVVM-C architecture with RxSwift(/Cocoa) used for bindings between view and view model. Networking is done with `URLSession` abstracted behind a protocol, and models are represented as simple `Decodable` structs. Kingfisher is used for image caching 
+The app is build using an MVVM-C architecture with RxSwift(/Cocoa) used for bindings between view and view model. Networking is done with `URLSession` abstracted behind a protocol, and models are represented as simple `Decodable` structs. Kingfisher is used for image caching
+
+## Versions
+
+Built using Xcode 9.3 and Cocoapods 1.4.0
 
 ## Tests
 
