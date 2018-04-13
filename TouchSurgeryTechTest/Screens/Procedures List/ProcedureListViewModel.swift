@@ -10,8 +10,6 @@ import Foundation
 import RxSwift
 import RxCocoa
 
-typealias Procedure = (String, String)
-
 final class ProcedureListViewModel {
 
     let disposeBag = DisposeBag()

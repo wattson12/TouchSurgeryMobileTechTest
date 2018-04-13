@@ -54,7 +54,7 @@ extension ProcedureListTableViewController: UITableViewDelegate, UITableViewData
         }
 
         let procedure = viewModel.procedures.value[indexPath.row]
-        cell.nameLabel.text = procedure.0
+        cell.nameLabel.text = procedure.name
 
         return cell
     }
@@ -65,6 +65,6 @@ extension ProcedureListTableViewController: UITableViewDelegate, UITableViewData
         }
 
         let procedure = viewModel.procedures.value[indexPath.row]
-        cell.iconImageView.kf.setImage(with: URL(string: procedure.1))
+        cell.iconImageView.kf.setImage(with: URL(string: procedure.icon))
     }
 }
