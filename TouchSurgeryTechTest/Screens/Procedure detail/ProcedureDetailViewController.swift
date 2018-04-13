@@ -70,6 +70,14 @@ class ProcedureDetailViewController: BaseViewController {
                 self.detailView.imageView.kf.setImage(with: URL(string: card))
             })
             .disposed(by: disposeBag)
+
+        //set title to name of procedure
+        viewModel
+            .procedure
+            .observeOn(MainScheduler.instance)
+            .mapToKeypath(\.name)
+            .bind(to: self.navigationItem.rx.title)
+            .disposed(by: disposeBag)
     }
 
     override func viewDidAppear(_ animated: Bool) {
