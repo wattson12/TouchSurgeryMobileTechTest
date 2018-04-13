@@ -13,7 +13,7 @@ import RxCocoa
 
 class ProcedureListTableViewController: BaseViewController {
 
-    @available(iOS, unavailable, message: "init() is unavailable, use init(viewModel:) instead")
+    @available(iOS, unavailable, message: "init() is unavailable, use init(viewModel:coordinatorDelegate:) instead")
     override init() { fatalError() }
 
     let tableView: UITableView = {
@@ -24,10 +24,12 @@ class ProcedureListTableViewController: BaseViewController {
         return tableView
     }()
 
-    let viewModel: ProcedureListViewModel
+    private let viewModel: ProcedureListViewModel
+    private weak var coordinatorDelegate: ProcedureListTableViewControllerAppCoordinatorDelegate?
 
-    init(viewModel: ProcedureListViewModel) {
+    init(viewModel: ProcedureListViewModel, coordinatorDelegate: ProcedureListTableViewControllerAppCoordinatorDelegate) {
         self.viewModel = viewModel
+        self.coordinatorDelegate = coordinatorDelegate
 
         super.init()
     }
@@ -50,6 +52,13 @@ class ProcedureListTableViewController: BaseViewController {
                 cell.nameLabel.text = procedure.name
                 cell.iconImageView.kf.setImage(with: URL(string: procedure.icon))
             }
+            .disposed(by: disposeBag)
+
+        tableView.rx
+            .modelSelected(Procedure.self)
+            .subscribe(onNext: { [unowned self] selectedProcedure in
+                self.coordinatorDelegate?.procedureWasSelected(selectedProcedure, fromViewController: self)
+            })
             .disposed(by: disposeBag)
     }
 

@@ -17,4 +17,12 @@ extension UIColor {
     static var procedureName: UIColor {
         return .darkText
     }
+
+    static var detailImageViewBackground: UIColor {
+        return .lightGray
+    }
+
+    static var detailTitle: UIColor {
+        return .darkText
+    }
 }
